@@ -1,0 +1,346 @@
+{
+  "schema_version": 1,
+  "title": {
+    "en": "Six-bar linkage with SolidWorks mass properties and a downward 200 N load",
+    "zh": "六杆机构：SolidWorks 质量属性与向下 200 N 外力"
+  },
+  "pmks_app_url": "https://app.pmksplus.com/",
+  "prepared_import_file": "model.pmks",
+  "provenance": {
+    "en": "Prepared import, not a native browser export. Mass properties are transcribed from supplied SolidWorks screenshots; target coordinates follow the established MATLAB model.",
+    "zh": "本文件是准备好的导入模型，不是浏览器原生导出。质量属性来自用户提供的 SolidWorks 截图，目标坐标沿用已确定的 MATLAB 模型。"
+  },
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "centroidal_inertia": "kg*m^2",
+    "force": "N",
+    "input_speed": "RPM",
+    "angular_velocity": "rad/s",
+    "angular_acceleration": "rad/s^2"
+  },
+  "coordinate_frame": {
+    "en": "Global x right, y up; planar rotation about +z. Initial coordinates.",
+    "zh": "全局 x 向右、y 向上，绕 +z 轴作平面转动；坐标对应初始位置。"
+  },
+  "material": {
+    "assumed_grade": "Aluminum 6061-T6",
+    "screenshot_density_kg_m3": 2700,
+    "note": {
+      "en": "Density is shown in the screenshots; alloy grade and temper are assumptions, not established by density alone.",
+      "zh": "截图显示了密度；牌号和热处理状态属于选定假设，不能仅由密度确认。"
+    }
+  },
+  "joints": {
+    "A": {
+      "target_initial_xy_m": [
+        1.4,
+        0.485
+      ],
+      "encoded_initial_xy_m": [
+        1.4,
+        0.485
+      ],
+      "grounded": true,
+      "input": true
+    },
+    "B": {
+      "target_initial_xy_m": [
+        1.67,
+        0.99
+      ],
+      "encoded_initial_xy_m": [
+        1.67,
+        0.99
+      ],
+      "grounded": false,
+      "input": false
+    },
+    "C": {
+      "target_initial_xy_m": [
+        0.255,
+        1.035
+      ],
+      "encoded_initial_xy_m": [
+        0.255,
+        1.035
+      ],
+      "grounded": false,
+      "input": false
+    },
+    "D": {
+      "target_initial_xy_m": [
+        0.285,
+        0.055
+      ],
+      "encoded_initial_xy_m": [
+        0.285,
+        0.055
+      ],
+      "grounded": true,
+      "input": false
+    },
+    "E": {
+      "target_initial_xy_m": [
+        0.195,
+        2.54
+      ],
+      "encoded_initial_xy_m": [
+        0.195,
+        2.54
+      ],
+      "grounded": false,
+      "input": false
+    },
+    "F": {
+      "target_initial_xy_m": [
+        -0.98,
+        2.57
+      ],
+      "encoded_initial_xy_m": [
+        -0.98,
+        2.57
+      ],
+      "grounded": false,
+      "input": false
+    },
+    "G": {
+      "target_initial_xy_m": [
+        0.05,
+        0.2
+      ],
+      "encoded_initial_xy_m": [
+        0.05,
+        0.2
+      ],
+      "grounded": true,
+      "input": false
+    },
+    "H": {
+      "target_initial_xy_m": [
+        -1.714591427659256,
+        4.260273479177123
+      ],
+      "encoded_initial_xy_m": [
+        -1.715,
+        4.26
+      ],
+      "grounded": false,
+      "input": false
+    }
+  },
+  "geometry": {
+    "H_definition": "H = F + 1.843 * (F-G) / norm(F-G)",
+    "FH_length_m": 1.843,
+    "H_is_revolute_connection": false,
+    "H_role": {
+      "en": "Tracer/application point on rigid GFH beyond F in the G-to-F direction.",
+      "zh": "H 为 GFH 刚体上沿 G→F 方向越过 F 的示踪点和施力点。"
+    }
+  },
+  "links": [
+    {
+      "id": "AB",
+      "joints": [
+        "A",
+        "B"
+      ],
+      "mass_kg": 8.03,
+      "centroidal_Izz_kg_m2": 0.26,
+      "com_target_initial_xy_m": [
+        1.536733363916078,
+        0.7407420325097016
+      ],
+      "com_encoded_initial_xy_m": [
+        1.537,
+        0.741
+      ],
+      "cad_com_mapping": {
+        "from": "A",
+        "toward": "B",
+        "distance_m": 0.29
+      }
+    },
+    {
+      "id": "BC",
+      "joints": [
+        "B",
+        "C"
+      ],
+      "mass_kg": 19.41,
+      "centroidal_Izz_kg_m2": 3.39,
+      "com_target_initial_xy_m": [
+        0.9646412340420778,
+        1.012431904217743
+      ],
+      "com_encoded_initial_xy_m": [
+        0.965,
+        1.012
+      ],
+      "cad_com_mapping": {
+        "from": "C",
+        "toward": "B",
+        "distance_m": 0.71
+      }
+    },
+    {
+      "id": "DCE",
+      "joints": [
+        "D",
+        "C",
+        "E"
+      ],
+      "mass_kg": 33.48,
+      "centroidal_Izz_kg_m2": 17.81,
+      "com_target_initial_xy_m": [
+        0.23975803228598874,
+        1.3041809974368663
+      ],
+      "com_encoded_initial_xy_m": [
+        0.24,
+        1.304
+      ],
+      "cad_com_mapping": {
+        "from": "D",
+        "toward": "E",
+        "distance_m": 1.25
+      }
+    },
+    {
+      "id": "EF",
+      "joints": [
+        "E",
+        "F"
+      ],
+      "mass_kg": 16.16,
+      "centroidal_Izz_kg_m2": 1.97,
+      "com_target_initial_xy_m": [
+        -0.39019221024183426,
+        2.554941077708302
+      ],
+      "com_encoded_initial_xy_m": [
+        -0.39,
+        2.555
+      ],
+      "cad_com_mapping": {
+        "from": "F",
+        "toward": "E",
+        "distance_m": 0.59
+      }
+    },
+    {
+      "id": "GFH",
+      "joints": [
+        "G",
+        "F",
+        "H"
+      ],
+      "mass_kg": 59.68,
+      "centroidal_Izz_kg_m2": 99.17,
+      "com_target_initial_xy_m": [
+        -0.830871977822548,
+        2.226860764504309
+      ],
+      "com_encoded_initial_xy_m": [
+        -0.831,
+        2.227
+      ],
+      "cad_com_mapping": {
+        "from": "G",
+        "toward": "H",
+        "distance_m": 2.21
+      }
+    }
+  ],
+  "input": {
+    "joint": "A",
+    "link": "AB",
+    "direction": "counter-clockwise",
+    "target_rpm": 23.1481481481481,
+    "encoded_rpm": 23,
+    "target_omega_z_rad_s": 2.42406840554768,
+    "alpha_z_rad_s2": 0,
+    "cycle_period_s": 2.592,
+    "parts_required": 12500,
+    "operating_time_h": 9,
+    "parts_per_input_revolution": 1,
+    "note": {
+      "en": "Steady speed after startup. One complete out-and-back cycle per input revolution; no startup or dwell allowance.",
+      "zh": "按电机启动后匀速计算；输入每圈完成一个往返、搬运一件，不包含启动或停留余量。"
+    }
+  },
+  "force": {
+    "id": "F1",
+    "name": "Q",
+    "link": "GFH",
+    "application_point_ref": "H",
+    "target_initial_anchor_xy_m": [
+      -1.714591427659256,
+      4.260273479177123
+    ],
+    "encoded_initial_anchor_xy_m": [
+      -1.715,
+      4.26
+    ],
+    "encoded_direction_handle_xy_m": [
+      -1.715,
+      3.76
+    ],
+    "components_global_N": [
+      0,
+      -200
+    ],
+    "magnitude_N": 200,
+    "angle_rad": -1.5707963267948966,
+    "base_frame": "global",
+    "local": false,
+    "arrow_outward": true,
+    "payload_mass_added": false,
+    "note": {
+      "en": "Prescribed constant force, not a payload point mass. Anchor moves with GFH; direction remains globally downward. Arrow length is visual only.",
+      "zh": "给定恒定外力，不是工件点质量。作用点随 GFH 移动，方向保持全局向下；箭头长度仅用于显示。"
+    }
+  },
+  "display": {
+    "angle_unit": "radian",
+    "show_com": true,
+    "object_scale": 0.72
+  },
+  "warnings": [
+    {
+      "code": "integer_rpm",
+      "en": "PMKS stores input speed as an integer (23 RPM). After reopening, re-enter 23.1481481481481 RPM.",
+      "zh": "PMKS 将转速保存为整数（23 RPM）；重新打开后需输入 23.1481481481481 RPM。"
+    },
+    {
+      "code": "coordinate_rounding",
+      "en": "PMKS serializes coordinates to 0.001 m. Encoded H and Q anchor coincide at (-1.715, 4.260) m; full-precision targets are recorded separately.",
+      "zh": "PMKS 将坐标保存至 0.001 m；编码后的 H 与 Q 作用点均为 (-1.715, 4.260) m，高精度计算目标另列。"
+    },
+    {
+      "code": "screenshot_precision",
+      "en": "CAD screenshots display two decimal places. Additional transformed-coordinate digits do not imply extra CAD precision.",
+      "zh": "CAD 截图仅显示两位小数，变换后更多小数位不代表额外的 CAD 精度。"
+    },
+    {
+      "code": "centroidal_inertia",
+      "en": "Use centroidal Lzz from SolidWorks, not the bottom Izz about the CAD origin. CAD thickness z offset is not a planar PMKS coordinate.",
+      "zh": "使用 SolidWorks 质心处 Lzz，不使用最下方绕 CAD 原点的 Izz；厚度方向 z 偏移不是 PMKS 平面坐标。"
+    },
+    {
+      "code": "com_reset",
+      "en": "Changing joint geometry can recalculate CoMs. Re-enter affected custom CoMs last. If H changes, keep Q's anchor coincident with H.",
+      "zh": "修改关节几何可能重算质心，应最后重填受影响的自定义质心；若 H 改变，需保持 Q 的作用点与 H 重合。"
+    },
+    {
+      "code": "dce_geometry",
+      "en": "CAD DCE is straight, while initial C is approximately 5.49 mm off the D-E line. CoM mapping follows the D-to-E axis as in MATLAB.",
+      "zh": "CAD 中 DCE 为直杆，而初始 C 偏离 D-E 直线约 5.49 mm；质心按 MATLAB 中 D→E 轴转换。"
+    },
+    {
+      "code": "force_sign",
+      "en": "Use positive magnitude +200 N and signed Y component -200 N. Current PMKS source clamps a negative magnitude to zero.",
+      "zh": "力的大小输入 +200 N，Y 分量输入 -200 N；当前 PMKS 源码会将负大小截为零。"
+    }
+  ]
+}
