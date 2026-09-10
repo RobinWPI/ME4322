@@ -1,0 +1,3 @@
+# Preserve CAD file bytes, including STEP line endings.
+SOLIDWORKS/*.SLDPRT binary
+SOLIDWORKS/*.STEP binary

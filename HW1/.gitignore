@@ -1,0 +1,6 @@
+# Generated MATLAB results
+/MATLAB/results_matlab/
+/MATLAB/results_pmks_comparison/
+
+# SOLIDWORKS temporary lock files
+/SOLIDWORKS/~$*
