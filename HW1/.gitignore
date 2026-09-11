@@ -5,3 +5,7 @@
 
 # SOLIDWORKS temporary lock files
 /SOLIDWORKS/~$*
+
+# Local-only report Word drafts
+/Report/HW1_First_Position_IEEE_Tables.docx
+/Report/HW1_Plots_of_Various_Quantities_IEEE.docx

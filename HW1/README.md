@@ -7,7 +7,7 @@ Six-bar linkage models, MATLAB calculations, comparison data and report material
 - [Essay (Google Docs)](https://docs.google.com/document/d/1jJHeWnsE9gbaxTjAvMku-VIbA_qBt6lieXLE9j1jCU0/edit?tab=t.0)
 - [Checklist (Google Docs)](https://docs.google.com/document/d/1Ascv-7TABrtnUP82rIQxwvR_fvaNIsdAwOIh9Mvc8PA/edit?tab=t.0)
 
-Open these links in a browser. The essay and checklist are maintained in Google Docs; this repository stores their links only, not Word or PDF exports. The Word files in `Report` are separate supporting sections.
+Open these links in a browser. The essay and checklist are maintained in Google Docs; this repository stores their links only, not Word or PDF exports. Supporting figures and CSV data remain in `Report`.
 
 ## Download and run
 
@@ -55,8 +55,6 @@ In the reference filenames, `v_` and `a_` identify linear velocity and accelerat
 | File or folder | How to use it |
 | --- | --- |
 | [Report README](Report/README.md) | Open the essay link and find the supporting report materials. |
-| [HW1_First_Position_IEEE_Tables.docx](Report/HW1_First_Position_IEEE_Tables.docx) | Download and open in Word to copy or edit the six first-position tables. |
-| [HW1_Plots_of_Various_Quantities_IEEE.docx](Report/HW1_Plots_of_Various_Quantities_IEEE.docx) | Download and open in Word to copy the seven report figures and their explanations. |
 | [Figures](Report/Figures/) | Open the PNG images for viewing or insert them directly into the essay. Filenames identify angular motion, H-point motion, mass-center acceleration and torque plots. |
 | [Data](Report/Data/) | Open `FirstPosition_*.csv` to inspect the tabulated initial results and `PMKS_FullCycle_Comparison.csv` to inspect full-cycle comparison errors. |
 | [Checklist README](Checklist/README.md) | Follow the Google Docs checklist link and use it to check the report requirements. |
