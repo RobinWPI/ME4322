@@ -10,7 +10,7 @@ These Google Docs are linked only; no Word or PDF exports are included.
 | Folder | Contents |
 | --- | --- |
 | [PMKS](PMKS/) | Corrected browser model, opening instructions and native reference exports |
-| [MATLAB](MATLAB/) | Main calculation, separate comparison script and validation tests |
+| [MATLAB](MATLAB/) | Only main.m and data_comparison_analysis.m |
 | [SOLIDWORKS](SOLIDWORKS/) | Original native part and STEP model |
 | [Report](Report/) | Essay link, first-position tables, seven explained plots, figure images and result data |
 | [Checklist](Checklist/) | Google Docs checklist link |
@@ -23,4 +23,4 @@ These Google Docs are linked only; no Word or PDF exports are included.
 
 The model uses the supplied 6061-T6 CAD mass properties and a constant global **200 N downward force at H**, with link self-weight and no added payload mass. The current comparison contains 95 initial-position PMKS values and 67 complete-cycle component comparisons. Newton's second-law report results remain MATLAB-only.
 
-The supplied PMKS link-record order fixes the old second-loop import issue. Full details and known precision differences are in the PMKS and MATLAB READMEs. The Word files are report sections, not a complete submitted paper.
+The supplied PMKS link-record order fixes the old second-loop import issue. Model details and known precision differences are in the [PMKS README](PMKS/README.md). The Word files are report sections, not a complete submitted paper.
