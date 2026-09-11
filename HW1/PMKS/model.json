@@ -342,5 +342,16 @@
       "en": "Use positive magnitude +200 N and signed Y component -200 N. Current PMKS source clamps a negative magnitude to zero.",
       "zh": "力的大小输入 +200 N，Y 分量输入 -200 N；当前 PMKS 源码会将负大小截为零。"
     }
-  ]
+  ],
+  "release": "2026-09-11",
+  "link_record_order": [
+    "AB",
+    "BC",
+    "EF",
+    "DCE",
+    "GFH"
+  ],
+  "import_note": "Preserve the supplied record order. Reordering DCE before EF can produce missing second-loop kinematics and incorrect dynamic forces in PMKS+ 2.0.3.",
+  "reference_manifest": "reference_manifest.json",
+  "gravity_m_s2": 9.80665
 }

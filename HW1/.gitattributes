@@ -1,3 +1,10 @@
-# Preserve CAD file bytes, including STEP line endings.
-SOLIDWORKS/*.SLDPRT binary
-SOLIDWORKS/*.STEP binary
+*.csv -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+*.png binary
+*.docx binary
+*.SLDPRT binary
+*.STEP -text
+*.m text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.pmks text eol=lf
+*.url text eol=crlf

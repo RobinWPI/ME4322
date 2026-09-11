@@ -1,39 +1,21 @@
-# ME4322 - Homework 1
+# ME4322 Homework 1
 
-Six-bar linkage analysis for Fall 2026.
-
-## Contents
+Final model, MATLAB code and report sections, updated September 11, 2026.
 
 | Folder | Contents |
 | --- | --- |
-| [PMKS](PMKS/) | Browser link, PMKS+ import model, and model parameters |
-| [SOLIDWORKS](SOLIDWORKS/) | Native SOLIDWORKS part and STEP export |
-| [MATLAB](MATLAB/) | Main calculation and separate data comparison scripts |
-| [Report](Report/) | Reserved for the final report |
-| [Checklist](Checklist/) | Reserved for the homework checklist |
+| [PMKS](PMKS/) | Corrected browser model, opening instructions and native reference exports |
+| [MATLAB](MATLAB/) | Main calculation, separate comparison script and validation tests |
+| [SOLIDWORKS](SOLIDWORKS/) | Original native part and STEP model |
+| [Report](Report/) | First-position tables, seven explained plots, figure images and result data |
+| [Checklist](Checklist/) | Reserved for the completed assignment checklist |
 
-## Open the mechanism
+## Start
 
-Use the **Open the saved PMKS+ model** link in [PMKS/README.md](PMKS/README.md), preferably in Chrome. The same folder contains a Windows browser shortcut and the importable model.
+1. Open the model using [PMKS/README.md](PMKS/README.md). Restore **23.1481481481481 RPM counterclockwise** after importing; the save format reopens at 23 RPM.
+2. In MATLAB, set Current Folder to `HW1/MATLAB`, then run `main` followed by `data_comparison_analysis`. Figures appear automatically.
+3. Copy the editable tables and figure explanations from the two Word documents in [Report](Report/) into the final paper.
 
-After opening the saved model, restore the input speed to **23.1481481481481 RPM**, counterclockwise. The saved PMKS format rounds the speed to 23 RPM; see the PMKS instructions for precision and loading notes.
+The model uses the supplied 6061-T6 CAD mass properties and a constant global **200 N downward force at H**, with link self-weight and no added payload mass. The current comparison contains 95 initial-position PMKS values and 67 complete-cycle component comparisons. Newton's second-law report results remain MATLAB-only.
 
-## Run the MATLAB analysis
-
-Set MATLAB's Current Folder to `HW1/MATLAB`, then run:
-
-```matlab
-main
-data_comparison_analysis
-```
-
-- `main.m` performs the MATLAB calculations, exports MATLAB-only result tables, and produces five figures. Symbolic Math Toolbox is required.
-- `data_comparison_analysis.m` reads the saved MATLAB results and compares them with PMKS values hard-coded in that script. It produces comparison tables and a comparison figure; it does not rerun the mechanism calculations or call PMKS.
-
-Running only `main` is sufficient for the MATLAB analysis. No external PMKS CSV files are needed. See [MATLAB/README.md](MATLAB/README.md) for model assumptions and reference-data limits.
-
-## Future documents
-
-The final report and checklist have not been uploaded yet. Their folders contain placeholders only.
-
-The PMKS bundle previously stored at `homework1/pmks_web` has moved to `HW1/PMKS`. Existing course files outside HW1 are unchanged.
+The supplied PMKS link-record order fixes the old second-loop import issue. Full details and known precision differences are in the PMKS and MATLAB READMEs. The Word files are report sections, not a complete submitted paper.

@@ -1,0 +1,6 @@
+Quantity,Unit,MATLAB,PMKS,Source,AbsDifference
+alpha_AB_z,rad/s^2,0,0,PMKS native CSV 2026-09-11: alpha_AB.csv,0
+alpha_BC_z,rad/s^2,-0.957738034849239,-0.958,PMKS native CSV 2026-09-11: alpha_BC.csv,0.000261965150760823
+alpha_DCE_z,rad/s^2,1.27847768974261,1.278,PMKS native CSV 2026-09-11: alpha_DCE.csv,0.000477689742605314
+alpha_EF_z,rad/s^2,1.43046924568076,1.43,PMKS native CSV 2026-09-11: alpha_EF.csv,0.000469245680760677
+alpha_GFH_z,rad/s^2,1.50386579725901,1.504,PMKS native CSV 2026-09-11: alpha_GFH.csv,0.000134202740993628

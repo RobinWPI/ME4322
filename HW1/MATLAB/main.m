@@ -1,6 +1,7 @@
-% Six-bar linkage analysis
+% Six-bar linkage analysis, final release 2026-09-11
 clc;
 clear;
+release_date = '2026-09-11';
 
 %% Input speed
 parts_required = 12500;
@@ -55,14 +56,13 @@ I_S3_z = 17.81;
 I_S4_z = 1.97;
 I_S5_z = 99.17;
 
-%% Weights and payload
+%% Weights and prescribed force
 W_AB = [0 -m_AB*g 0];
 W_BC = [0 -m_BC*g 0];
 W_DCE = [0 -m_DCE*g 0];
 W_EF = [0 -m_EF*g 0];
 W_GFH = [0 -m_GFH*g 0];
 Q_static = [0 -200 0];
-m_payload = 200/g;
 
 %% Mass centers
 % Rounded local CAD coordinates, mapped to the linkage plane.
@@ -204,8 +204,8 @@ a_S4 = a_E+cross(alpha_EF,r_S4_E)+cross(omega_EF,cross(omega_EF,r_S4_E));
 a_S5 = cross(alpha_GFH,r_S5_G)+cross(omega_GFH,cross(omega_GFH,r_S5_G));
 
 %% Newton's second law
-% Point-mass artifact force on link GFH.
-Q_dynamic = m_payload*([0 -g 0]-a_H);
+% The same constant global force acts at H in both analyses.
+Q_dynamic = Q_static;
 % Link AB
 eqn15 = F_A+F_B+W_AB == m_AB*a_S1;
 eqn16 = cross(A-S1,F_A)+cross(B-S1,F_B)+T == I_S1_z*alpha_AB;
@@ -241,6 +241,8 @@ FirstPosition.v_COM = [v_S1;v_S2;v_S3;v_S4;v_S5];
 FirstPosition.a_COM = [a_S1;a_S2;a_S3;a_S4;a_S5];
 FirstPosition.StaticForces = StaticForces;
 FirstPosition.DynamicForces = DynamicForces;
+FirstPosition.Q_static = Q_static;
+FirstPosition.Q_dynamic = Q_dynamic;
 
 %% Position analysis over one cycle
 P.link_names = link_names;
@@ -248,7 +250,8 @@ P.mass = [m_AB m_BC m_DCE m_EF m_GFH];
 P.I_centroid_z = [I_S1_z I_S2_z I_S3_z I_S4_z I_S5_z];
 P.g_vector = [0;-g;0]; P.k_hat = [0;0;1];
 P.omega_AB = omega_AB'; P.alpha_AB = alpha_AB';
-P.Q_static = Q_static'; P.payload_mass = m_payload;
+P.Q_static = Q_static'; P.Q_dynamic = Q_dynamic';
+P.load_model = 'prescribed_force_at_H';
 for j=1:8, ref.(['r_' point_names{j}])=FirstPosition.Joints(j,:)'; end
 for j=1:5, ref.(sprintf('r_S%d',j))=FirstPosition.COM(j,:)'; end
 initial_theta = atan2(B(2)-A(2),B(1)-A(1));
@@ -320,18 +323,20 @@ Diagnostics.max_velocity_residual_m_s = max(loop_error(:,3:4),[],'all');
 Diagnostics.max_acceleration_residual_m_s2 = max(loop_error(:,5:6),[],'all');
 Diagnostics.max_force_residual = max(force_error,[],'all');
 Diagnostics.max_power_residual_W = max(abs(power_error),[],'all');
+Diagnostics.max_external_force_error_N = max(abs(Q_history-repmat(Q_static,N,1)),[],'all');
 FDinput = struct('time_s',time,'motion',Motion,'parameters',P);
 Diagnostics.finite_difference = finite_difference_check(FDinput);
 assert(max(loop_error,[],'all')<1e-9);
 assert(Diagnostics.max_force_residual<1e-7);
 assert(Diagnostics.max_power_residual_W<1e-6);
+assert(Diagnostics.max_external_force_error_N==0);
 
 %% First-position tables
 Tables = first_position_tables(FirstPosition,static_initial,dynamic_initial,output_folder);
 disp('Input speed (rpm), angular velocity (rad/s), cycle time (s):');
 disp([n_AB omega_AB(3) T_cycle]);
 disp('Static equilibrium:'); disp(Tables.Static);
-disp('Newton second law:'); disp(Tables.Dynamic);
+disp('Newton second law, prescribed force at H:'); disp(Tables.Dynamic);
 disp('Angular velocities:'); disp(Tables.AngularVelocity);
 disp('Angular accelerations:'); disp(Tables.AngularAcceleration);
 disp('Joint velocities:'); disp(Tables.JointVelocity);
@@ -343,9 +348,10 @@ export_cycle(Motion,time,angle_deg,static_history,dynamic_history,Q_history,outp
 plot_classroom(Motion,angle_deg,static_history,dynamic_history,show_plots,output_folder);
 save(fullfile(output_folder,'classroom_results.mat'),'FirstPosition','Tables','Motion', ...
     'static_history','dynamic_history','Q_history','time','angle_deg','P', ...
-    'Diagnostics','material','rho','T_cycle');
+    'Diagnostics','material','rho','T_cycle','release_date');
 disp('Validation:'); disp(Diagnostics);
 fprintf('Results saved to %s\n',output_folder);
+fprintf('Steady input; constant 200 N downward at H; no added payload mass.\n');
 
 %% Local functions
 function Tables=first_position_tables(first,xstatic,xdynamic,out)
@@ -575,7 +581,7 @@ function [M,b,Q]=force_system(s,P)
 M=zeros(15); b=zeros(15,2);
 connections={{'A',1;'B',1},{'B',-1;'C',1}, ...
     {'D',1;'C',-1;'E',1},{'E',-1;'F',1},{'G',1;'F',-1}};
-Q=[P.Q_static,P.payload_mass*(P.g_vector-s.a_H)];
+Q=[P.Q_static,P.Q_dynamic];
 for j=1:5
     rows=3*j-2:3*j; S=s.(sprintf('r_S%d',j)); data=connections{j};
     for k=1:size(data,1)

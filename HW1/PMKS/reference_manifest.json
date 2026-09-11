@@ -1,0 +1,421 @@
+{
+  "release": "2026-09-11",
+  "app": "https://app.pmksplus.com/",
+  "version": "2.0.3",
+  "input_speed_rpm": 23.14814814814815,
+  "period_s": 2.592,
+  "model_url": "https://app.pmksplus.com/?3u.BG.N,0.2112.6A,A,Lu,7b,0.0B,B,Q6,FU,0.0C,C,3-,GB,0.4D,D,4T,t,0.0E,E,33,di,0.0F,F,0FK,eA,0.4G,G,o,38,0.0H,H,0Qp,12a,0..YRAB,AB,1zU,44,O1,Bb,B3E2CD,A,B,,.YRBC,BC,4lI,q_,F5,Fq,FDCDAC,B,C,,.YREF,EF,3yW,Uo,066,dx,F4CAE4,E,F,,.YRDCE,DCE,8B8,4MI,3m,KO,CBD5E8,C,E,D,,.YRGFH,GFH,EaW,ODY,0C-,Yp,E6F5C9,G,F,H,,..2F1,GFH,Q,0Qp,12a,0Qp,wm,mr0..N_Q",
+  "model_sha256": "e0fa0606024d3efc66677b4f5b1c25b7a766511b570e2ce553d8fb98c4c7f10a",
+  "method": "Native Download Data (CSV) from the hosted PMKS+ UI. No simulated or reconstructed PMKS values.",
+  "series": {
+    "omega_AB": {
+      "file": "reference_csv/omega_AB.csv",
+      "native_filename": "AB_Velocity (rad_s).csv",
+      "sha256": "f5d9cc0a267e3405ce4f0f055181962523a89d3e6c6c865fa91f2108668d10fc",
+      "type": "scalar",
+      "unit": "rad/s",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Velocity (rad/s)",
+      "first_row": "0,0,2.424"
+    },
+    "alpha_AB": {
+      "file": "reference_csv/alpha_AB.csv",
+      "native_filename": "AB_Acceleration (rad_s²).csv",
+      "sha256": "8a50642fa1f2acebbeefaf93cfaa4e70e0773379657cb2980c48ef1cbae42b53",
+      "type": "scalar",
+      "unit": "rad/s^2",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Acceleration (rad/s²)",
+      "first_row": "0,0,0"
+    },
+    "a_S1": {
+      "file": "reference_csv/a_S1.csv",
+      "native_filename": "AB_Acceleration (m_s²).csv",
+      "sha256": "8e7af1d18e56812a990e10f4462783d72849063c31408f694c09ef148290208c",
+      "type": "vector",
+      "unit": "m/s^2",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Acceleration (m/s²), X-comp,Y-comp",
+      "first_row": "0,0,1.706,-0.805,-1.504"
+    },
+    "omega_BC": {
+      "file": "reference_csv/omega_BC.csv",
+      "native_filename": "BC_Velocity (rad_s).csv",
+      "sha256": "f66f24eb6f90f9bc5711cf3e7b4e1f33e8b5e7744425cb0b369839af391f61aa",
+      "type": "scalar",
+      "unit": "rad/s",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Velocity (rad/s)",
+      "first_row": "0,0,0.49"
+    },
+    "alpha_BC": {
+      "file": "reference_csv/alpha_BC.csv",
+      "native_filename": "BC_Acceleration (rad_s²).csv",
+      "sha256": "942a14c12ab8b5d9d982182c4baa2140720e3acf6c0233dfd13532256e046bcb",
+      "type": "scalar",
+      "unit": "rad/s^2",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Acceleration (rad/s²)",
+      "first_row": "0,0,-0.958"
+    },
+    "a_S2": {
+      "file": "reference_csv/a_S2.csv",
+      "native_filename": "BC_Acceleration (m_s²).csv",
+      "sha256": "c06459a076e851ebcf2645f0c44e42475f4006baf782cca2d31838d9f71fa994",
+      "type": "vector",
+      "unit": "m/s^2",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Acceleration (m/s²), X-comp,Y-comp",
+      "first_row": "0,0,2.689,-1.397,-2.298"
+    },
+    "omega_DCE": {
+      "file": "reference_csv/omega_DCE.csv",
+      "native_filename": "DCE_Velocity (rad_s).csv",
+      "sha256": "bcf04462f145073a4fc268b69fce49d303a86e2e885368c3b473c578e8a07fcb",
+      "type": "scalar",
+      "unit": "rad/s",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Velocity (rad/s)",
+      "first_row": "0,0,1.272"
+    },
+    "alpha_DCE": {
+      "file": "reference_csv/alpha_DCE.csv",
+      "native_filename": "DCE_Acceleration (rad_s²).csv",
+      "sha256": "0666ab5ab755f1fa13e066401417f64be9ff4f5dbc08a2e6ee46ca02147ea186",
+      "type": "scalar",
+      "unit": "rad/s^2",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Acceleration (rad/s²)",
+      "first_row": "0,0,1.278"
+    },
+    "a_S3": {
+      "file": "reference_csv/a_S3.csv",
+      "native_filename": "DCE_Acceleration (m_s²).csv",
+      "sha256": "87b895b1d47b36d924d7457b1d5029f19cacde7b3b49fc68e031e6992097afa6",
+      "type": "vector",
+      "unit": "m/s^2",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Acceleration (m/s²), X-comp,Y-comp",
+      "first_row": "0,0,2.576,-1.524,-2.077"
+    },
+    "omega_EF": {
+      "file": "reference_csv/omega_EF.csv",
+      "native_filename": "EF_Velocity (rad_s).csv",
+      "sha256": "40b9c0df768f36d5cb23dd37caf9e6d581a335a82ad9a3a5312c9c56dd631722",
+      "type": "scalar",
+      "unit": "rad/s",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Velocity (rad/s)",
+      "first_row": "0,0,1.083"
+    },
+    "alpha_EF": {
+      "file": "reference_csv/alpha_EF.csv",
+      "native_filename": "EF_Acceleration (rad_s²).csv",
+      "sha256": "d0ac2147c87a86c36b1b79157bc832dca3b1e99abac0cc8298d61ef813b9fd45",
+      "type": "scalar",
+      "unit": "rad/s^2",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Acceleration (rad/s²)",
+      "first_row": "0,0,1.43"
+    },
+    "a_S4": {
+      "file": "reference_csv/a_S4.csv",
+      "native_filename": "EF_Acceleration (m_s²).csv",
+      "sha256": "e6390b1b6094a82445076cb2189b720db8f47b5ae8f900eef1be1806c0159f85",
+      "type": "vector",
+      "unit": "m/s^2",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Acceleration (m/s²), X-comp,Y-comp",
+      "first_row": "0,0,5.521,-2.366,-4.988"
+    },
+    "omega_GFH": {
+      "file": "reference_csv/omega_GFH.csv",
+      "native_filename": "GFH_Velocity (rad_s).csv",
+      "sha256": "ede4bbd465f8a96509c020a11d06970192955078677cb5ef194c5d60fd056d9c",
+      "type": "scalar",
+      "unit": "rad/s",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Velocity (rad/s)",
+      "first_row": "0,0,1.347"
+    },
+    "alpha_GFH": {
+      "file": "reference_csv/alpha_GFH.csv",
+      "native_filename": "GFH_Acceleration (rad_s²).csv",
+      "sha256": "f75a10025dc8a3e93e35ebf790b97ac7f70ec4a815f2461607b53a36e3d973ce",
+      "type": "scalar",
+      "unit": "rad/s^2",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Acceleration (rad/s²)",
+      "first_row": "0,0,1.504"
+    },
+    "a_S5": {
+      "file": "reference_csv/a_S5.csv",
+      "native_filename": "GFH_Acceleration (m_s²).csv",
+      "sha256": "92c0290b4601f62789a4e833a141a357c5d9721acbae7a7c781598e524ab9619",
+      "type": "vector",
+      "unit": "m/s^2",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Acceleration (m/s²), X-comp,Y-comp",
+      "first_row": "0,0,5.209,-1.45,-5.003"
+    },
+    "v_A": {
+      "file": "reference_csv/v_A.csv",
+      "native_filename": "A_Velocity (m_s).csv",
+      "sha256": "cde5f4c11de042ad60d8794f989e44e3f7ca187b0bd9aeb94fe6a53b718e2625",
+      "type": "vector",
+      "unit": "m/s",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Velocity (m/s), X-comp,Y-comp",
+      "first_row": "0,0,0,0,0"
+    },
+    "a_A": {
+      "file": "reference_csv/a_A.csv",
+      "native_filename": "A_Acceleration (m_s²).csv",
+      "sha256": "7ae638b289eed0f555ab44aecdc719c6a064ed79dedd64c11f2206e63afc1141",
+      "type": "vector",
+      "unit": "m/s^2",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Acceleration (m/s²), X-comp,Y-comp",
+      "first_row": "0,0,0,0,0"
+    },
+    "v_B": {
+      "file": "reference_csv/v_B.csv",
+      "native_filename": "B_Velocity (m_s).csv",
+      "sha256": "ec133360cb3640b115fc3a5954606d21c8681061f04aed6e66a406477b767928",
+      "type": "vector",
+      "unit": "m/s",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Velocity (m/s), X-comp,Y-comp",
+      "first_row": "0,0,1.388,-1.224,0.654"
+    },
+    "a_B": {
+      "file": "reference_csv/a_B.csv",
+      "native_filename": "B_Acceleration (m_s²).csv",
+      "sha256": "efa12e35289030a3e1f7fc4539f2e7a3ae19c8801093bc0b8ed8fb3e8f778de1",
+      "type": "vector",
+      "unit": "m/s^2",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Acceleration (m/s²), X-comp,Y-comp",
+      "first_row": "0,0,3.365,-1.587,-2.967"
+    },
+    "v_C": {
+      "file": "reference_csv/v_C.csv",
+      "native_filename": "C_Velocity (m_s).csv",
+      "sha256": "eea1388a02a28b94e33152d60a46bc7b53748166eb532986114ba15e4b5f89d0",
+      "type": "vector",
+      "unit": "m/s",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Velocity (m/s), X-comp,Y-comp",
+      "first_row": "0,0,1.247,-1.246,-0.038"
+    },
+    "a_C": {
+      "file": "reference_csv/a_C.csv",
+      "native_filename": "C_Acceleration (m_s²).csv",
+      "sha256": "d2cfcee801ca8093965c15ab1289c2f9d190d3c08b8d3ce18a19fe144f3f73eb",
+      "type": "vector",
+      "unit": "m/s^2",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Acceleration (m/s²), X-comp,Y-comp",
+      "first_row": "0,0,2.021,-1.204,-1.623"
+    },
+    "v_D": {
+      "file": "reference_csv/v_D.csv",
+      "native_filename": "D_Velocity (m_s).csv",
+      "sha256": "cde5f4c11de042ad60d8794f989e44e3f7ca187b0bd9aeb94fe6a53b718e2625",
+      "type": "vector",
+      "unit": "m/s",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Velocity (m/s), X-comp,Y-comp",
+      "first_row": "0,0,0,0,0"
+    },
+    "a_D": {
+      "file": "reference_csv/a_D.csv",
+      "native_filename": "D_Acceleration (m_s²).csv",
+      "sha256": "7ae638b289eed0f555ab44aecdc719c6a064ed79dedd64c11f2206e63afc1141",
+      "type": "vector",
+      "unit": "m/s^2",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Acceleration (m/s²), X-comp,Y-comp",
+      "first_row": "0,0,0,0,0"
+    },
+    "v_E": {
+      "file": "reference_csv/v_E.csv",
+      "native_filename": "E_Velocity (m_s).csv",
+      "sha256": "208a1695c0754e919628f6852f9175dee96d6838d79c884cb8580b65fe7c0e54",
+      "type": "vector",
+      "unit": "m/s",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Velocity (m/s), X-comp,Y-comp",
+      "first_row": "0,0,3.162,-3.16,-0.114"
+    },
+    "a_E": {
+      "file": "reference_csv/a_E.csv",
+      "native_filename": "E_Acceleration (m_s²).csv",
+      "sha256": "928e16995e6c9aacc7578c71a445447cf52c2c2dd751e02e638e8de75a8584d9",
+      "type": "vector",
+      "unit": "m/s^2",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Acceleration (m/s²), X-comp,Y-comp",
+      "first_row": "0,0,5.126,-3.031,-4.133"
+    },
+    "v_F": {
+      "file": "reference_csv/v_F.csv",
+      "native_filename": "F_Velocity (m_s).csv",
+      "sha256": "59608ed058187d89bb6fdf7a78b0343643002adfe0dacfe4c0616bdd6ef17ce7",
+      "type": "vector",
+      "unit": "m/s",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Velocity (m/s), X-comp,Y-comp",
+      "first_row": "0,0,3.481,-3.192,-1.387"
+    },
+    "a_F": {
+      "file": "reference_csv/a_F.csv",
+      "native_filename": "F_Acceleration (m_s²).csv",
+      "sha256": "ee0b14aa92fa21d08fcc7d6afe2f571616df49c049e1f69838306ccb4bc9ec4a",
+      "type": "vector",
+      "unit": "m/s^2",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Acceleration (m/s²), X-comp,Y-comp",
+      "first_row": "0,0,6.09,-1.695,-5.849"
+    },
+    "v_G": {
+      "file": "reference_csv/v_G.csv",
+      "native_filename": "G_Velocity (m_s).csv",
+      "sha256": "cde5f4c11de042ad60d8794f989e44e3f7ca187b0bd9aeb94fe6a53b718e2625",
+      "type": "vector",
+      "unit": "m/s",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Velocity (m/s), X-comp,Y-comp",
+      "first_row": "0,0,0,0,0"
+    },
+    "a_G": {
+      "file": "reference_csv/a_G.csv",
+      "native_filename": "G_Acceleration (m_s²).csv",
+      "sha256": "7ae638b289eed0f555ab44aecdc719c6a064ed79dedd64c11f2206e63afc1141",
+      "type": "vector",
+      "unit": "m/s^2",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Acceleration (m/s²), X-comp,Y-comp",
+      "first_row": "0,0,0,0,0"
+    },
+    "v_H": {
+      "file": "reference_csv/v_H.csv",
+      "native_filename": "H_Velocity (m_s).csv",
+      "sha256": "8cab8a0b0c1f7b3ee86da7cbc2518d0e45ae4112e1df07d3cd3f9a85be991ac6",
+      "type": "vector",
+      "unit": "m/s",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Velocity (m/s), X-comp,Y-comp",
+      "first_row": "0,0,5.963,-5.469,-2.378"
+    },
+    "a_H": {
+      "file": "reference_csv/a_H.csv",
+      "native_filename": "H_Acceleration (m_s²).csv",
+      "sha256": "2a6a8c222990bdef8830312d159af84cf9eef726f2b15075d602fdc35e42bde1",
+      "type": "vector",
+      "unit": "m/s^2",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Acceleration (m/s²), X-comp,Y-comp",
+      "first_row": "0,0,10.433,-2.903,-10.021"
+    },
+    "static_F_A": {
+      "file": "reference_csv/static_F_A.csv",
+      "native_filename": "A_AB_Force (N).csv",
+      "sha256": "f6aff8f364cae3c5e56813f023cc2da2a172f77f9f30322a15774b0246eaba77",
+      "type": "vector",
+      "unit": "N",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Force (N), X-comp,Y-comp",
+      "first_row": "0,0,1062.432,1053.065,140.768",
+      "force_on_link": "AB"
+    },
+    "static_T": {
+      "file": "reference_csv/static_T.csv",
+      "native_filename": "A_Torque (N·m).csv",
+      "sha256": "ae24767275f90546521dbc4206165b80e9cb961c97cc82bd6fd4637c32f9ea29",
+      "type": "scalar",
+      "unit": "N m",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Torque (N·m)",
+      "first_row": "0,0,-504.264"
+    },
+    "dynamic_T_diagnostic": {
+      "file": "reference_csv/dynamic_T_diagnostic.csv",
+      "native_filename": "A_Torque (N·m).csv",
+      "sha256": "2a19e960d20a803401724296d4accd0eb1517ffe1e744ab832d194a22ef7a409",
+      "type": "scalar",
+      "unit": "N m",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Torque (N·m)",
+      "first_row": "0,0,-47.039"
+    },
+    "static_F_B": {
+      "file": "reference_csv/static_F_B.csv",
+      "native_filename": "B_AB_Force (N).csv",
+      "sha256": "d8b4e3f67ac7f83653c058fa39e1c5cef7afd48ff56b3d5c2014df945f38183c",
+      "type": "vector",
+      "unit": "N",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Force (N), X-comp,Y-comp",
+      "first_row": "0,0,1054.89,-1053.065,-62.02",
+      "force_on_link": "AB"
+    },
+    "static_F_C": {
+      "file": "reference_csv/static_F_C.csv",
+      "native_filename": "C_BC_Force (N).csv",
+      "sha256": "23e8f4444aca617bfc549df5f64cd9b65014637a50e38f6ba127c135619af3aa",
+      "type": "vector",
+      "unit": "N",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Force (N), X-comp,Y-comp",
+      "first_row": "0,0,1060.856,-1053.065,128.327",
+      "force_on_link": "BC"
+    },
+    "static_F_D": {
+      "file": "reference_csv/static_F_D.csv",
+      "native_filename": "D_DCE_Force (N).csv",
+      "sha256": "942713e9cfb5d43ca9a5df4e13d3008d800428e6dabd54b60cf91b47cad3fd10",
+      "type": "vector",
+      "unit": "N",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Force (N), X-comp,Y-comp",
+      "first_row": "0,0,834.363,-647.774,525.881",
+      "force_on_link": "DCE"
+    },
+    "static_F_E": {
+      "file": "reference_csv/static_F_E.csv",
+      "native_filename": "E_DCE_Force (N).csv",
+      "sha256": "93c9944896929dc1947f9c1062d3c4f07beee92223a8189c47d6585895bfff87",
+      "type": "vector",
+      "unit": "N",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Force (N), X-comp,Y-comp",
+      "first_row": "0,0,411.161,-405.291,-69.227",
+      "force_on_link": "DCE"
+    },
+    "static_F_F": {
+      "file": "reference_csv/static_F_F.csv",
+      "native_filename": "F_EF_Force (N).csv",
+      "sha256": "0fcb1a8d1800fcdf57973b8b4ab2e0f9c98ea6df4487b8de7ba25ac727c81d5b",
+      "type": "vector",
+      "unit": "N",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Force (N), X-comp,Y-comp",
+      "first_row": "0,0,415.002,-405.291,89.248",
+      "force_on_link": "EF"
+    },
+    "static_F_G": {
+      "file": "reference_csv/static_F_G.csv",
+      "native_filename": "G_GFH_Force (N).csv",
+      "sha256": "7eb4cbe912989bda2574bf35bc0a1561c5a214f721861c1e6657881484981bf9",
+      "type": "vector",
+      "unit": "N",
+      "samples": 361,
+      "header": "Time (seconds),Time (steps),Force (N), X-comp,Y-comp",
+      "first_row": "0,0,963.861,-405.291,874.509",
+      "force_on_link": "GFH"
+    }
+  },
+  "reopened_speed_text": "23.00 RPM",
+  "captured_at_utc": "2026-09-11T03:07:38.688Z"
+}
