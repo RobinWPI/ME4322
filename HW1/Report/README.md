@@ -1,4 +1,10 @@
-# Homework 1 Report Sections
+# Homework 1 Report
+
+[Open the essay in Google Docs](https://docs.google.com/document/d/1jJHeWnsE9gbaxTjAvMku-VIbA_qBt6lieXLE9j1jCU0/edit?tab=t.0).
+
+The essay is linked only; no Word or PDF export of the Google Doc is stored here.
+
+## Supporting report sections
 
 - [First-position tables](HW1_First_Position_IEEE_Tables.docx): six editable IEEE-style tables, including 95 PMKS initial-position reference values.
 - [Plots of Various Quantities](HW1_Plots_of_Various_Quantities_IEEE.docx): seven labeled figures, each followed by an explanation. Figure numbers 7–13 follow the linkage/FBD figures and can be edited.
