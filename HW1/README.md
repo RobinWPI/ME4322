@@ -10,7 +10,7 @@ These Google Docs are linked only; no Word or PDF exports are included.
 | Folder | Contents |
 | --- | --- |
 | [PMKS](PMKS/) | Corrected browser model, opening instructions and native reference exports |
-| [MATLAB](MATLAB/) | Only main.m and data_comparison_analysis.m |
+| [MATLAB](MATLAB/) | Two scripts and a README explaining the AI-written comparison analysis |
 | [SOLIDWORKS](SOLIDWORKS/) | Original native part and STEP model |
 | [Report](Report/) | Essay link, first-position tables, seven explained plots, figure images and result data |
 | [Checklist](Checklist/) | Google Docs checklist link |
